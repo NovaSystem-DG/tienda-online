@@ -192,6 +192,15 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel(); 
 });
 
+// --- AUTOSLIDE ---
+setInterval(() => {
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateCarousel();
+}, 3000); // Cambia cada 3 segundos
 
   </script>
 </body>

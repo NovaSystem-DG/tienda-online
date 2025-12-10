@@ -151,6 +151,8 @@
     </div>
   </footer>
 
+
+
   <script>
 document.addEventListener('DOMContentLoaded', function() {
     const carouselContainer = document.getElementById('carousel-container');
@@ -192,6 +194,15 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel(); 
 });
 
+// --- AUTOSLIDE ---
+setInterval(() => {
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateCarousel();
+}, 3000); // Cambia cada 3 segundos
 
   </script>
 </body>
