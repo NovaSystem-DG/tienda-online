@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow Beauty Co. | Nova System</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Beauty Co. | Nova System</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header class="header-nav">
     <div class="container navbar">
-        <span class="logo">GLOW BEAUTY CO.</span>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Rutinas</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
+      <span class="logo">GLOW BEAUTY CO.</span>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Rutinas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -34,7 +38,8 @@
           </div>
           <div class="text-content-box">
             <h3>Hidratación Esencial</h3>
-            <p class="real-text">Nuestra fórmula ofrece hidratación profunda por 24 horas. Formulada con botánicos para calmar y revitalizar.</p>
+            <p class="real-text">Nuestra fórmula ofrece hidratación profunda por 24 horas. Formulada con botánicos para
+              calmar y revitalizar.</p>
             <p class="description-text">✨ Ácido hialurónico y niacinamida.</p>
             <button class="btn-primary">COMPRAR AHORA</button>
           </div>
@@ -61,28 +66,41 @@
       </div>
     </section>
   </main>
-  
+
   <section class="section testimonials-section">
-  <div class="container">
-    <h2>Lo que dicen nuestras Glow Girls</h2>
-    <div class="line-divider"></div>
-    <div class="grid-3-col">
-      <div class="testimonial-card">
-        <p>"Mi piel cambió en solo una semana. La hidratación es real."</p>
-        <span>- María V.</span>
+    <div class="container">
+      <h2>Lo que dicen nuestras Glow Girls</h2>
+      <div class="line-divider"></div>
+      <div class="grid-3-col">
+        <div class="testimonial-card">
+          <p>"Mi piel cambió en solo una semana. La hidratación es real."</p>
+          <span>- María V.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"Amo que sean productos veganos. El empaque es hermoso."</p>
+          <span>- Elena R.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"El mejor sérum que he probado en años. 100% recomendado."</p>
+          <span>- Sofía M.</span>
+        </div>
       </div>
-      <div class="testimonial-card">
-        <p>"Amo que sean productos veganos. El empaque es hermoso."</p>
-        <span>- Elena R.</span>
-      </div>
-      <div class="testimonial-card">
-        <p>"El mejor sérum que he probado en años. 100% recomendado."</p>
-        <span>- Sofía M.</span>
+    </div>
+  </section>
+
+  <div id="discountModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <div class="modal-body">
+        <span class="modal-emoji">🎁</span>
+        <h2>¡Regalo para tu Piel!</h2>
+        <p>Suscríbete y recibe un <strong>15% de descuento</strong> en tu primera compra.</p>
+        <input type="email" placeholder="Tu mejor correo..." class="modal-input">
+        <button class="btn-primary">OBTENER MI REGALO</button>
+        <p class="modal-footer-text">Promoción válida por tiempo limitado.</p>
       </div>
     </div>
   </div>
-</section>
-
 
   <footer class="footer">
     <p>&copy; 2026 Nova System Digital | Glow Beauty Co.</p>
@@ -93,29 +111,56 @@
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     const items = document.querySelectorAll('.gallery-item');
-    
+
     let index = 0;
 
     function moveCarousel() {
-        const itemWidth = items[0].offsetWidth + 20; // Ancho + gap
-        track.style.transform = `translateX(${-index * itemWidth}px)`;
+      const itemWidth = items[0].offsetWidth + 20; // Ancho + gap
+      track.style.transform = `translateX(${-index * itemWidth}px)`;
     }
 
     next.addEventListener('click', () => {
-        index = (index < items.length - 3) ? index + 1 : 0;
-        moveCarousel();
+      index = (index < items.length - 3) ? index + 1 : 0;
+      moveCarousel();
     });
 
     prev.addEventListener('click', () => {
-        index = (index > 0) ? index - 1 : items.length - 3;
-        moveCarousel();
+      index = (index > 0) ? index - 1 : items.length - 3;
+      moveCarousel();
     });
 
     // Auto-slide cada 3 segundos
     setInterval(() => {
-        index = (index < items.length - 3) ? index + 1 : 0;
-        moveCarousel();
+      index = (index < items.length - 3) ? index + 1 : 0;
+      moveCarousel();
     }, 3000);
+
+    // --- LÓGICA DEL POP-UP ---
+    const modal = document.getElementById('discountModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Función para mostrar el modal
+    function showModal() {
+      modal.style.display = 'flex';
+    }
+
+    // Cerrar al hacer clic en la X
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Cerrar al hacer clic fuera del cuadro blanco
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    // Aparecer después de 5 segundos (5000 milisegundos)
+    setTimeout(showModal, 3000);
+
   </script>
+
 </body>
+
 </html>
