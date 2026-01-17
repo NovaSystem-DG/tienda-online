@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glow Beauty Co.</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Beauty Co. | Nova System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
   <header class="header-nav">
-    <div class="container">
-      <nav class="navbar">
-        <span class="logo">Glow Beauty Co.</span>
-        <ul class="nav-links">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Tienda</a></li>
-          <li><a href="#">Rutinas</a></li>
-          <li><a href="#">Tutoriales</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
+    <div class="container navbar">
+        <span class="logo">GLOW BEAUTY CO.</span>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Rutinas</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
     </div>
   </header>
 
@@ -31,183 +30,92 @@
         <div class="line-divider"></div>
         <div class="content-row">
           <div class="video-placeholder">
-            <img src="Crema-facial.jpg" alt="Placeholder de Video"
-              class="video-img">
-
+            <img src="Crema-facial.jpg" alt="SkinCare" class="video-img">
           </div>
           <div class="text-content-box">
-            <h3>Nuestra Crema Hidratante Esencial</h3>
-
-            <p class="real-text">
-              La clave para una piel radiante. Nuestra crema esencial ofrece hidratación profunda por 24 horas.
-              Formulada con ingredientes activos botánicos para calmar y revitalizar la piel sensible.
-              Absorción rápida sin dejar residuos grasos.
-            </p>
-
-            <p class="description-text">Fórmula vegana con ácido hialurónico y niacinamida.</p>
+            <h3>Hidratación Esencial</h3>
+            <p class="real-text">Nuestra fórmula ofrece hidratación profunda por 24 horas. Formulada con botánicos para calmar y revitalizar.</p>
+            <p class="description-text">✨ Ácido hialurónico y niacinamida.</p>
+            <button class="btn-primary">COMPRAR AHORA</button>
           </div>
-        </div>
-        <button class="btn-primary">VER TIENDA</button>
-      </div>
-    </section>
-
-    <section class="section travel-org-section">
-      <div class="container">
-        <h2>Tu Rutina de Belleza Perfecta</h2>
-        <div class="line-divider"></div>
-        <div class="grid-3-col">
-          <div class="item-card">
-            <div class="icon-placeholder">1</div>
-            <h4>Limpieza</h4>
-            <p class="step-desc">Remueve impurezas.</p>
-          </div>
-          <div class="item-card">
-            <div class="icon-placeholder">2</div>
-            <h4>Sérum</h4>
-            <p class="step-desc">Tratamiento concentrado.</p>
-          </div>
-          <div class="item-card">
-            <div class="icon-placeholder">3</div>
-            <h4>Hidratación</h4>
-            <p class="step-desc">Sella la humedad.</p>
-          </div>
-          <div class="item-card">
-            <div class="icon-placeholder">4</div>
-            <h4>Mascarilla</h4>
-            <p class="step-desc">Nutrición semanal.</p>
-          </div>
-          <div class="item-card">
-            <div class="icon-placeholder">5</div>
-            <h4>Contorno</h4>
-            <p class="step-desc">Cuidado delicado.</p>
-          </div>
-          <div class="item-card">
-            <div class="icon-placeholder">6</div>
-            <h4>Protección</h4>
-            <p class="step-desc">Bloqueador solar diario.</p>
-          </div>
-        </div>
-        <div class="full-width-placeholder">
-          <p>¡Compra la rutina completa con 15% de descuento!</p>
         </div>
       </div>
     </section>
 
     <section class="section island-view-section">
       <div class="container">
-        <h2>Galería de Ingredientes Naturales</h2>
+        <h2>Ingredientes Naturales</h2>
         <div class="line-divider"></div>
-
-        <div class="carousel-container" id="carousel-container">
-          <div class="carousel-track">
-            <div class="gallery-item">🌿 Aloe Vera</div>
-            <div class="gallery-item">💧 Ácido Hialurónico</div>
-            <div class="gallery-item">🥑 Aguacate</div>
-            <div class="gallery-item">🌹 Rosa Mosqueta</div>
-            <div class="gallery-item">🍃 Té Verde</div>
-            <div class="gallery-item">🍊 Vitamina C</div>
+        <div class="carousel-container">
+          <div class="carousel-track" id="track">
+            <div class="gallery-item">🌿<br>Aloe Vera</div>
+            <div class="gallery-item">💧<br>Hialurónico</div>
+            <div class="gallery-item">🥑<br>Aguacate</div>
+            <div class="gallery-item">🌹<br>Rosa Mosqueta</div>
+            <div class="gallery-item">🍃<br>Té Verde</div>
+            <div class="gallery-item">🍊<br>Vitamina C</div>
           </div>
-          <button class="prev-btn">◀</button>
-          <button class="next-btn">▶</button>
+          <button class="prev-btn" id="prev">◀</button>
+          <button class="next-btn" id="next">▶</button>
         </div>
-      </div>
-    </section>
-
-    <section class="section packages-section">
-      <div class="container">
-        <h2>Nuestros Mejores Productos</h2>
-        <div class="line-divider"></div>
-        <div class="grid-3-col">
-          <div class="package-card">
-            <div class="package-image">🧴</div>
-            <p>Limpiador Facial</p>
-            <div class="rating-dots">
-              <span>•</span><span>•</span><span>•</span><span>•</span><span class="unfilled">•</span>
-            </div>
-          </div>
-          <div class="package-card">
-            <div class="package-image">💊</div>
-            <p>Cápsulas de Retinol</p>
-            <div class="rating-dots">
-              <span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
-            </div>
-          </div>
-          <div class="package-card">
-            <div class="package-image">💄</div>
-            <p>Bálsamo Labial</p>
-            <div class="rating-dots">
-              <span>•</span><span>•</span><span>•</span><span class="unfilled">•</span><span class="unfilled">•</span>
-            </div>
-          </div>
-        </div>
-        <div class="text-line medium spacer-line"></div>
-        <div class="text-line small"></div>
       </div>
     </section>
   </main>
- 
+  
+  <section class="section testimonials-section">
+  <div class="container">
+    <h2>Lo que dicen nuestras Glow Girls</h2>
+    <div class="line-divider"></div>
+    <div class="grid-3-col">
+      <div class="testimonial-card">
+        <p>"Mi piel cambió en solo una semana. La hidratación es real."</p>
+        <span>- María V.</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"Amo que sean productos veganos. El empaque es hermoso."</p>
+        <span>- Elena R.</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"El mejor sérum que he probado en años. 100% recomendado."</p>
+        <span>- Sofía M.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <footer class="footer">
-  <div class="footer-content">
-    <h3>Nova System Digital</h3>
-    <p>Síguenos en redes como <strong>@NovaSystemDG</strong></p>
-
-    <ul class="footer-links">
-      <li><a href="#">Política de Privacidad</a></li>
-      <li><a href="#">Términos y Condiciones</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Nova System Digital. Todos los derechos reservados.</p>
-  </div>
-</footer>
-
+    <p>&copy; 2026 Nova System Digital | Glow Beauty Co.</p>
+  </footer>
 
   <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const carouselContainer = document.getElementById('carousel-container');
-    if (!carouselContainer) return;
-
-    const track = carouselContainer.querySelector('.carousel-track');
-    const items = carouselContainer.querySelectorAll('.gallery-item');
-    const prevButton = carouselContainer.querySelector('.prev-btn');
-    const nextButton = carouselContainer.querySelector('.next-btn');
-  
+    const track = document.getElementById('track');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const items = document.querySelectorAll('.gallery-item');
     
-    let currentIndex = 0;
-    const maxIndex = items.length - 3; 
+    let index = 0;
 
-  
-    function updateCarousel() {
-        const offset = -currentIndex * (100 / 3);
-        track.style.transform = `translateX(${offset}%)`;
+    function moveCarousel() {
+        const itemWidth = items[0].offsetWidth + 20; // Ancho + gap
+        track.style.transform = `translateX(${-index * itemWidth}px)`;
     }
-    
-    nextButton.addEventListener('click', () => {
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; 
-        }
-        updateCarousel();
-    });
-   
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = maxIndex;
-        }
-        updateCarousel();
-    });
-    
-    updateCarousel(); 
-});
 
+    next.addEventListener('click', () => {
+        index = (index < items.length - 3) ? index + 1 : 0;
+        moveCarousel();
+    });
 
+    prev.addEventListener('click', () => {
+        index = (index > 0) ? index - 1 : items.length - 3;
+        moveCarousel();
+    });
+
+    // Auto-slide cada 3 segundos
+    setInterval(() => {
+        index = (index < items.length - 3) ? index + 1 : 0;
+        moveCarousel();
+    }, 3000);
   </script>
 </body>
-
 </html>
